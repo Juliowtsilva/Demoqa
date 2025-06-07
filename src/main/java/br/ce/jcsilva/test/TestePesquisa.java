@@ -10,12 +10,12 @@ import org.junit.runners.MethodSorters;
 import br.ce.jcsilva.core.BaseTest;
 import br.ce.jcsilva.core.DriverFactory;
 import br.ce.jcsilva.core.ReportManager;
-import br.ce.jcsilva.page.CampoTreinamentoPage;
+import br.ce.jcsilva.page.DemoqaPage;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestePesquisa extends BaseTest {
 
-	private CampoTreinamentoPage page;
+	private DemoqaPage page;
 	private static final Logger LOGGER = Logger.getLogger(TestePesquisa.class);
 	
 
@@ -24,7 +24,7 @@ public class TestePesquisa extends BaseTest {
 		ReportManager.createTest("Teste Pesquisa");
 		ReportManager.logInfo("Iniciando teste de pesquisa de livros");
 		DriverFactory.getDriver().get("https://demoqa.com/books");
-		page = new CampoTreinamentoPage();
+		page = new DemoqaPage();
 		ReportManager.logPass("Acessou a tela de pesquisa");
 
 	}
