@@ -11,12 +11,12 @@ import org.junit.runners.MethodSorters;
 import br.ce.jcsilva.core.BaseTest;
 import br.ce.jcsilva.core.DriverFactory;
 import br.ce.jcsilva.core.ReportManager;
-import br.ce.jcsilva.page.CampoTreinamentoPage;
+import br.ce.jcsilva.page.DemoqaPage;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TesteCadastro extends BaseTest {
 
-	private CampoTreinamentoPage page;
+	private DemoqaPage page;
 	private static final Logger LOGGER = Logger.getLogger(TesteLogin.class);	
 
 
@@ -29,7 +29,7 @@ public class TesteCadastro extends BaseTest {
 		ReportManager.logInfo("Iniciando teste de cadastro de usuário");
 		
 		DriverFactory.getDriver().get("https://demoqa.com/register");
-		page = new CampoTreinamentoPage();
+		page = new DemoqaPage();
 		ReportManager.logPass("Acessou a tela de cadastro");
 
 	}
